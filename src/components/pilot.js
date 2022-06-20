@@ -13,7 +13,7 @@ export default function Pilot() {
             </div>
             <div className="down">
                 <Typewriter options={{
-                    strings: ["python", "frondend javascript", "minecraft", "coffee", "student"],
+                    strings: ["python", "frontend javascript", "minecraft", "coffee", "student"],
                     autoStart: true,
                     loop: true,
                 }} />

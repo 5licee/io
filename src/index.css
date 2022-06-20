@@ -47,10 +47,37 @@ body, #root .App {
 
 /* navbar */
 nav {
-  position: fixed; top: 0; left: 0; z-index: 1;
-  height: 50px; width: 100%;
-  background-color: rgba(58, 58, 58, 0.5);
+  	position: fixed; top: 0; left: 0; z-index: 1;
+  	height: 50px; width: 100%;
+  	background-color: rgba(58, 58, 58, 0.5);
+	
+	display: flex; justify-content: flex-end;
 }
+nav .menu {
+	height: 50px; width: fit-content;
+	display: flex; justify-content: center; align-items: center; gap: 25px;
+	margin: 0 25px;
+}
+nav .menu .navbar-item {
+	height: 50px; width: fit-content; min-width: 50px;
+	display: flex; justify-content: center; align-items: center; flex-direction: column;
+	cursor: pointer;
+}
+nav .menu .navbar-item p {
+	font-size: revert; font-size: 16px;
+}
+nav .menu .navbar-item span {
+	height: 3px; width: 0;
+	background-color: #fd4747;
+	transition: all 0.25s;
+}
+nav .menu .navbar-item:hover span {
+	width: 25px;
+}
+nav .menu .navbar-item:hover p {
+	color: #fd4747;
+}
+
 
 /* main */
 main {
