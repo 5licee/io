@@ -1,14 +1,17 @@
 // components
 import Navbar from "./components/navbar";
+import Pilot from "./components/pilot";
+import About from "./components/about";
+import Hr from "./components/hr";
 
 function App() {
     return (
         <div className="App">
             <Navbar />
             <main>
-                <h1>Heyy! I am Kedarr.</h1>
-                <p>Website in development.</p>
-                <p>Coffee ❤️ </p>
+                <Pilot />
+                <Hr id="about"/>
+                <About />
             </main>
         </div>
     );

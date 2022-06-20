@@ -1,7 +1,7 @@
 // react
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
+// import reportWebVitals from './reportWebVitals';
 
 // App
 import App from './App';
@@ -17,4 +17,4 @@ root.render(
   	</React.StrictMode>
 );
 
-reportWebVitals();
+// reportWebVitals();

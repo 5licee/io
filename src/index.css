@@ -1,10 +1,11 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
-
 *{
 	font-family: 'Space Mono', monospace; font-weight: 800;
 	scroll-behavior: smooth;
 }
+/* material icons */
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0");
 
 /* color */
 .color {
@@ -20,20 +21,104 @@ body, h1, h2, h3, h4, h5, h6, p {
     margin: 0; border: 0; padding: 0;
     color: #FFF;
 }
-
 body, #root .App {
 	background-color: #272727;
-	height: fit-content; width: 100%; min-height: 100vh;
+	height: fit-content; width: 100%; 
+	
 }
 
+/* media quries */
+@media only screen and (min-width: 600px) {
+	h1 {
+		font-size: 96px;
+	}
+	p, .Typewriter {
+		font-size: 32px
+	}
+}
+@media only screen and (min-width: 300px) and (max-width: 599px) {
+	h1 {
+		font-size: 32px;
+	}
+	p, .Typewriter {
+		font-size: 16px
+	}
+}
+
+/* navbar */
 nav {
   position: fixed; top: 0; left: 0; z-index: 1;
-  width: 100%; height: 50px;
+  height: 50px; width: 100%;
   background-color: rgba(58, 58, 58, 0.5);
 }
 
+/* main */
 main {
-	position: fixed; top: 50px; left: 0; z-index: 0;
+	position: absolute; top: 50px; left: 0; z-index: 0;
 	width: 100%; min-height: calc(100vh - 50px);
 	background-color: #272727;
+
+	display: flex; flex-direction: column; justify-content: flex-start;
 }
+
+/* hr */
+.hr-container {
+	height: 50px; width: 100%;
+	display: flex; flex-direction: column; justify-content: center;
+	background-color: #272727;
+}
+.hr-container hr {
+	height: 10px; width: 50%;
+	background-color: #fd4747;
+	border: none;
+}
+
+/* pilot */
+.pilot {
+	height: calc(100vh - 50px); width: 100%;
+	display: flex; flex-direction: column; justify-content: flex-start;
+}
+.pilot .top {
+	height: 50%; width: 100%;
+	background-color: #fd4747;
+	display: flex; flex-direction: column; justify-content: flex-end;
+}
+.pilot .top h1 {
+	width: calc(100% - 50px);
+	margin: 25px;
+	color: #272727;
+	text-align: center;
+}
+.pilot .down {
+	height: 50%; width: 100%;
+	background-color: #272727;
+	display: flex; flex-direction: column; justify-content: space-between;
+}
+.pilot .down .Typewriter {
+	width: calc(100% - 50px);
+	margin: 25px;
+	color: #fd4747;
+	text-align: center;
+}
+.pilot .down .explore-button {
+	height: 100px; width: 100%;
+	display: flex; justify-content: center;
+}
+@keyframes move-y {
+	0% {transform: translateY(0);}
+	50% {transform: translateY(25px);}
+	100% {transform: translateY(0);}
+}
+.pilot .down .explore-button span {
+	font-size: 50px;
+	animation: move-y 4s ease-in-out infinite;
+	cursor: pointer;
+}
+
+/* about */
+.about {
+	height: calc(100vh - 50px); width: 100%;
+	display: flex; flex-direction: column; justify-content: flex-start;
+	background-color: #3A3A3A;
+}
+
