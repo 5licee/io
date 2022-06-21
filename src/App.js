@@ -2,16 +2,19 @@
 import Navbar from "./components/navbar";
 import Pilot from "./components/pilot";
 import About from "./components/about";
-import Hr from "./components/hr";
+
+// aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 function App() {
     return (
         <div className="App">
             <Navbar />
-            <main>
+            <main id="main">
                 
                 <Pilot />
-                <Hr id="about"/>
                 <About />
             </main>
         </div>
