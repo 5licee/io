@@ -28,12 +28,16 @@ export default function About() {
             <div className="content">
                 <h1>About me: </h1>
                 <p data-aos="zoom-in-up" data-aos-delay="0">
-                    I am Kedarr, a self taught developer💻. To me, coding is an Art. I believe in creating artwork that is simple, optimised and connects the user with their computer.
+                    I am Kedarr, a self taught developer 💻. To me, coding is an Art. I believe in creating artwork that is simple, optimised and connects the user with their computer.
                 </p>
                 <p data-aos="zoom-in-up" data-aos-delay="100">
-                    Apart from coding, i enjoy coffee☕ & music🎵.
+                    Apart from spending my time coding, I also play minecraft, watch anime 👺 and listen to music 🎧.
                 </p>
                 <p data-aos="zoom-in-up" data-aos-delay="200">
+                    I love coffee. ☕
+                </p>
+                <p data-aos="zoom-in-up" data-aos-delay="400">
+                |\---/|<br/>| o_o |<br />&nbsp;\_^_/  & a cat person
                 </p>
             </div>
             <div className="links">

@@ -14,13 +14,11 @@ window.onscroll = function() {
         document.getElementById("projects-nav").classList.remove("nav-active")
     }
     else if (y === main[1].offsetTop) {
-        console.log("about")
         document.getElementById("home-nav").classList.remove("nav-active")
         document.getElementById("about-nav").classList.add("nav-active")
         document.getElementById("projects-nav").classList.remove("nav-active")
     }
 }
-
 
 function NavbarItems (props) {
     function ScrollTo() {
