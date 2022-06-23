@@ -32,10 +32,10 @@ function NavbarItems (props) {
     }
 
     return (
-        <div className="navbar-item" id={props.name+"-nav"} onClick={ScrollTo}>
+        <li id={props.name+"-nav"} onClick={ScrollTo}>
             <p>{props.name}</p>
             <span></span>
-        </div>
+        </li>
     )
 }
 
@@ -46,13 +46,13 @@ export default function Navbar() {
 
     return (
         <nav className="top">
-            <div className="menu">
+            <ul>
                 {
                     items.map((item, index) => {
                         return <NavbarItems key={index} name={item} />
                     })
                 }
-            </div>
+            </ul>
         </nav>
     )
 }

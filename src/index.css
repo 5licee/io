@@ -17,7 +17,7 @@
 }
 
 /* presets */
-body, h1, h2, h3, h4, h5, h6, p {
+body, h1, h2, h3, h4, h5, h6, p, li, ul {
     margin: 0; border: 0; padding: 0;
     color: #FFF;
 }
@@ -28,14 +28,17 @@ body, #root .App {
 
 /* media quries */
 @media only screen and (min-width: 600px) {
-	h1 { font-size: 96px; }
-	p, .Typewriter { font-size: 24px }
+	h1 { font-size: 64px; }
+	p, .Typewriter { font-size: 20px }
 	nav.top { display: flex; justify-content: flex-end; }
 }
 @media only screen and (min-width: 300px) and (max-width: 599px) {
 	h1 { font-size: 32px; }
 	p, .Typewriter { font-size: 16px }
 	nav.top { display: flex; justify-content: center; }
+}
+@media only screen and (max-width :1200px) {
+	.about { flex-direction: column; align-items: center; justify-content: center;}
 }
 
 /* navbar */
@@ -44,29 +47,30 @@ nav.top {
   	height: 50px; width: 100%; min-width: 360;
   	background-color: rgba(58, 58, 58, 0.5);
 }
-nav.top .menu {
+nav.top ul {
 	height: 50px; width: fit-content;
 	margin: 0 25px;
 	display: flex; justify-content: center; align-items: center; gap: 25px;
+	list-style-type: none;
 
 }
-nav.top .menu .navbar-item {
+nav.top ul li {
 	height: 50px; width: fit-content; min-width: 50px;
 	display: flex; justify-content: center; align-items: center; flex-direction: column;
 	cursor: pointer;
 }
-nav.top .menu .navbar-item p {
+nav.top ul li p {
 	font-size: revert; font-size: 16px;
 }
-nav.top .menu .navbar-item span {
+nav.top ul li span {
 	height: 3px; width: 0;
 	background-color: #fd4747;
 	transition: all 0.25s; 
 }
-nav.top .menu .navbar-item:hover span {
+nav.top ul li:hover span {
 	width: 25px;
 }
-nav.top .menu .navbar-item:hover p {
+nav.top ul li:hover p {
 	color: #fd4747;
 }
 .nav-active p {
@@ -120,40 +124,59 @@ main {
 
 /* about */
 .about {
-	height: calc(100vh - 50px); width: min(900px, 90%); margin: 0 auto;
-	display: flex; flex-direction: column; justify-content: flex-start; gap: 50px;
+	height: calc(100vh - 100px); width: calc(100% - 50px); padding: 25px;
+	display: flex; justify-content: center; gap: 50px; 
+}
+.about .content {
+	height: 100%;  width: min(450px, 90%);
+	display: flex; flex-direction: column; justify-content: flex-start; gap: 25px;
 }
 .about .content h1, p { 
 	text-align: left; 
 }
-.about .content p { 
-	margin-top: 50px; 
+.about .content article  p { 
+	margin-top: 25px; 
 }
-.about .links {
+.about .content .links {
 	height: 100px; width: 100%;
 	display: flex; justify-content: flex-start; align-items: center; gap: 25px;
 }
-.about .links p {
+.about .content .links p {
 	font-size: 16px; color: #fd4747;
 }
-.about .links nav {
+.about .content .links nav {
 	height: 75px; width: min(fit-content, 100%);
 }
-.about .links nav .menu {
+.about .content .links nav ul {
 	height: 75px; width: 100%;
 	display: flex; justify-content: center; align-items: center; gap: 10px;
+	list-style-type: none;
 }
-.about .links nav .menu .navbar-item {
+.about .content .links nav ul li {
 	height: 50px; width: fit-content; min-width: 50px;
 	display: flex; justify-content: center; align-items: center; flex-direction: column;
 	background-color: rgba(0, 0, 0, 0.5); border-radius: 5px;
 }
-.about .links nav .menu .navbar-item a {
+.about .content .links nav ul li a {
 	padding: 5px;
 	text-decoration: none; color: #FFF; font-size: 16px;
-	transition: all 0.3s;
+	transition: all 0.1s;
 }
-.about .links nav .menu .navbar-item a:hover {
+.about .content .links nav ul li a:hover {
 	color: #fd4747;
 }
+.about .video-holder {
+	width: min(450px, 90%);
 
+}
+.about .video-holder img{
+	width: 100%;
+}
+
+.about .video-holder .computer {
+	height: 300px; width: 450px;
+	position: relative;
+	top: 0; left: 0;
+	border: 1px solid red;
+
+}

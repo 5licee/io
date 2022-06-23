@@ -7,7 +7,7 @@ function scrollTo() {
 
 export default function Pilot() {
     return (
-        <div className="pilot" id="home">
+        <section className="pilot" id="home">
             <div className="top">
                 <h1>नमस्ते! I am Kedarr</h1>
             </div>
@@ -21,6 +21,6 @@ export default function Pilot() {
                     <span className="material-symbols-rounded" onClick={scrollTo}>arrow_drop_down</span>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
