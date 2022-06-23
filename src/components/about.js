@@ -28,22 +28,20 @@ export default function About() {
     return (
         <section className="about" id="about">
             <div className="content">
-                <h1>About me: </h1>
+                <h2>[About me]</h2>
                 <article>
                     <p data-aos="zoom-in-up" data-aos-delay="0">I am Kedarr, a self taught developer 💻. To me, coding is an Art. I believe in creating artwork that is simple, optimised and connects the user with their computer.</p>
                     <p data-aos="zoom-in-up" data-aos-delay="100">Apart from spending my time coding, I also play minecraft, watch anime 👺 and listen to music 🎧.</p>
                     <p data-aos="zoom-in-up" data-aos-delay="200">I love coffee ☕ & cats 😼.</p>
                 </article>
-                <div className="links">
-                    <p>links:</p>
-                    <Navbar />
-                </div>
+                <h2>[Links]</h2>
+                <Navbar />
             </div>
-            <div className="video-holder" data-aos="zoom-in-up" data-aos-delay="300">
+            <figure className="video-holder">
                 <a href="https://www.youtube.com/watch?v=NUYvbT6vTPs">
                     <img src={VibeCat} alt="vibe-cat-gif" />
                 </a>
-            </div>
+            </figure>
         </section>
     )
 }

@@ -1,0 +1,184 @@
+/* material icons */
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0");
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+*{
+	font-family: 'Space Mono', monospace; font-weight: 800;
+	scroll-behavior: smooth; 
+}
+
+/* presets */
+body, h1, h2, h3, h4, h5, h6, p, li, ul {
+    margin: 0; border: 0; padding: 0;
+    color: #FFF;
+}
+html, body {
+	height: 100%; width: 100%; min-width: 360px;
+	background-color: #272727;
+}
+.App {
+	height: 100vh; width: 100%; min-width: 360px;
+}
+a {
+	text-decoration: none;
+}
+
+ul, li {
+	list-style-type: none;
+}
+
+/* meida quries */
+
+@media only screen and (min-width: 600px) {
+	h1 { font-size: 64px; }
+	p, .Typewriter { font-size: 20px }
+	nav.top { 
+		display: flex; justify-content: flex-end; 
+	}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 599px) {
+	h1 { font-size: 50px; }
+	p, .Typewriter { font-size: 16px }
+	nav.top { 
+		display: flex; justify-content: center; 
+	}
+}
+
+/* nav */
+nav.top {
+	position: fixed; top: 0; left: 0; z-index: 1;
+	height: 50px; width: calc(100% - 50px); min-width: 360; padding: 0 25px;
+	background-color: rgba(58, 58, 58, 0.5);
+}
+nav.top ul {
+	height: 50px; width: fit-content;
+	display: flex; justify-content: center; align-items: center; gap: 25px;
+}	
+nav.top ul li {
+	height: 50px; width: fit-content; min-width: 86px;
+	display: flex; justify-content: center; align-items: center; flex-direction: column;
+	cursor: pointer;
+}
+nav.top ul li p {
+	font-size: 16px;
+	transition: all 0.25s;
+}
+nav.top ul li span {
+	height: 3px; width: 0;
+	background-color: #fd4747;
+	transition: all 0.25s; 
+}
+nav.top ul li:hover span {
+	width: 25px;
+}
+nav.top ul li:hover p {
+	color: #fd4747;
+}
+.nav-active p {
+	color: #fd4747;
+}
+
+/* main */
+main {
+	position: relative; top: 50px; left: 0; z-index: 0; overflow-x: scroll;
+	width: 100%; min-height: calc(100vh - 50px); min-width: 360px;
+	display: flex; flex-direction: column; gap: 50px;
+	background-image: url(./assets/main-bg.svg); background-repeat: no-repeat; background-size: cover;
+}
+
+/* pilot */
+.pilot {
+	height: calc(100vh - 50px); width: 100%;
+	display: flex; flex-direction: column; justify-content: flex-start;
+}
+.pilot .top {
+	height: 50%; width: 100%; padding: 25px;
+	display: flex; flex-direction: column; justify-content: flex-end;
+	background-color: #fd4747;
+}
+.pilot .top h1 {
+	width: calc(100% - 50px);
+	color: #272727; text-align: center;
+}
+.pilot .down {
+	height: calc(50% - 50px); width: 100%; padding: 25px 0;
+	display: flex; flex-direction: column; justify-content: space-between;
+}
+.pilot .down .Typewriter {
+	width: calc(100% - 50px);
+	color: #fd4747; text-align: center;
+}
+.pilot .down .explore-button {
+	height: 100px; width: 100%;
+	display: flex; justify-content: center;
+}
+@keyframes move-y {
+	0% {transform: translateY(0);}
+	50% {transform: translateY(25px);}
+	100% {transform: translateY(0);}
+}
+.pilot .down .explore-button span {
+	font-size: 50px;
+	animation: move-y 4s ease-in-out infinite;
+	cursor: pointer;
+}
+
+/* about */
+.about {
+	height: calc(100vh - 100px); width: calc(100% - 50px); padding: 25px;
+	display: flex; justify-content: center; gap: 50px; 
+}
+.about .content {
+	height: 100%;  width: min(450px, 90%);
+	display: flex; flex-direction: column; justify-content: flex-start; gap: 25px;
+}
+.about .content h1, p { 
+	text-align: left; 
+}
+.about .content article  p { 
+	margin-top: 25px; 
+}
+.about .content .links {
+	height: 100px; width: 100%;
+	display: flex; justify-content: flex-start; align-items: center; gap: 25px;
+}
+.about .content .links p {
+	font-size: 16px; color: #fd4747;
+}
+.about .content .links nav {
+	height: 75px; width: min(fit-content, 100%);
+}
+.about .content .links nav ul {
+	height: 75px; width: 100%;
+	display: flex; justify-content: center; align-items: center; gap: 10px;
+}
+.about .content .links nav ul li {
+	height: 50px; width: fit-content; min-width: 50px;
+	display: flex; justify-content: center; align-items: center; flex-direction: column;
+	background-color: rgba(0, 0, 0, 0.5); border-radius: 5px;
+}
+.about .content .links nav ul li a {
+	padding: 5px;
+	text-decoration: none; color: #FFF; font-size: 16px;
+	transition: all 0.1s;
+}
+.about .content .links nav ul li a:hover {
+	color: #fd4747;
+}
+.about .video-holder {
+	width: min(450px, 90%);
+
+}
+.about .video-holder img{
+	width: 100%;
+}
+
+.about .video-holder .computer {
+	height: 300px; width: 450px;
+	position: relative;
+	top: 0; left: 0;
+	border: 1px solid red;
+
+}

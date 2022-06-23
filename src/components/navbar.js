@@ -5,18 +5,26 @@ window.onload = function() {
 }
 
 window.onscroll = function() {
+    var y = window.pageYOffset;
     const main = document.getElementById("main").children
-    // y offset
-    const y = window.pageYOffset
-    if (y === main[0].offsetTop) {
-        document.getElementById("home-nav").classList.add("nav-active")
-        document.getElementById("about-nav").classList.remove("nav-active")
-        document.getElementById("projects-nav").classList.remove("nav-active")
-    }
-    else if (y === main[1].offsetTop) {
-        document.getElementById("home-nav").classList.remove("nav-active")
-        document.getElementById("about-nav").classList.add("nav-active")
-        document.getElementById("projects-nav").classList.remove("nav-active")
+    switch (true) {
+        case 0 <= y && y < main[1].offsetTop - 1:
+            document.getElementById("home-nav").classList.add("nav-active")
+            document.getElementById("about-nav").classList.remove("nav-active")
+            document.getElementById("projects-nav").classList.remove("nav-active")
+            break;
+        case main[1].offsetTop - 1 <= y && y < main[2].offsetTop - 1:
+            document.getElementById("home-nav").classList.remove("nav-active")
+            document.getElementById("about-nav").classList.add("nav-active")
+            document.getElementById("projects-nav").classList.remove("nav-active")
+            break;
+        case main[2].offsetTop - 1 <= y:
+            document.getElementById("home-nav").classList.remove("nav-active")
+            document.getElementById("about-nav").classList.remove("nav-active")
+            document.getElementById("projects-nav").classList.add("nav-active")
+            break;
+        default:
+            break;
     }
 }
 
